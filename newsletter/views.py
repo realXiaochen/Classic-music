@@ -6,7 +6,7 @@ from .forms import SignUpForm
 def home(request):
 	# if request.method == "POST":
 	# 	# print request.POST
-	title = "Jiahui Wu is a Pig"
+	title = "Welcome to my site"
 	form = SignUpForm(request.POST or None)
 	context = {
 		"title":title,
