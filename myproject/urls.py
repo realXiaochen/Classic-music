@@ -19,5 +19,6 @@ from newsletter import views as newsletter_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(R'^$',newsletter_views.home),
-	url(r'^accounts/', include('registration.backends.hmac.urls')),
+	# url(r'^accounts/', include('registration.backends.hmac.urls')),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
 ]
