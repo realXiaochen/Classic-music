@@ -4,8 +4,8 @@ from django.shortcuts import render
 from .forms import SignUpForm
 
 def home(request):
-	if request.method == "POST":
-		# print request.POST
+	# if request.method == "POST":
+	# 	# print request.POST
 	title = "Jiahui Wu is a Pig"
 	form = SignUpForm(request.POST or None)
 	context = {
