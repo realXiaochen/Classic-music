@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    
+
     # Third Party
     'crispy_forms',
 
@@ -142,3 +142,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Crispy Form 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# Registration
+ACCOUNT_ACTIVATION_DAYS = 7
