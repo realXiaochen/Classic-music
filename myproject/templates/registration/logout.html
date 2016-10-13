@@ -1,6 +1,18 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% load i18n %}
 
-{% block content %}
-<p>{% trans "Logged out" %}</p>
+
+{% block jumbotron %}
 {% endblock %}
+
+{% block content %}
+<div class = "row col-md-8 col-md-offset-2">
+<h1 class = "lead">{% trans "Logged out" %}</h1>
+<br>
+
+
+{% endblock %}
+
+
+
