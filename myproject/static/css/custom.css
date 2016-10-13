@@ -1,0 +1,8 @@
+.hover-underline:hover {
+	text-decoration: underline;
+	color: #ff9900;
+}
+
+.hover-black:hover {
+	color: #000000;
+}

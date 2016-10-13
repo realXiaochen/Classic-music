@@ -4,21 +4,30 @@
 {% block head_title %}Welcome | {{ block.super }}{% endblock %}
 
 
-
 {% block jumbotron_content %}
-<h1>Hello there! example</h1>
-<p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-<p>To see the difference between static and fixed top navbars, just scroll.</p>
+<div class = "row">
+<div class = "col-md-5">
+<h1 class = "lead">Enjoy</h1>
+<p></p>
+<br>
+<p>The Best of Classical Music - Mozart, Beethoven, Bach, Chopin... </p>
 <p>
-<a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+<br>
+<a class="btn btn-lg btn-success" href="" role="button">
+<span class = "hover-black">Pick one</span> </a>
 </p>
+</div>
+<div class = "col-md-7">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UmU4KX7nxYs" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
 {% endblock %}
 
 
 
 
 {% block content %}
-<div class = "row">
+<!-- <div class = "row">
 <div class = "col-md-3 pull-right">
 <h1 class = "lead">{{ title }}</h1>
 <form method='POST' action=''>{% csrf_token %}
@@ -27,6 +36,6 @@
 <input type='submit' value='Sign Up' />
 </form>
 </div>
-</div>
+</div> -->
 
 {% endblock %}
