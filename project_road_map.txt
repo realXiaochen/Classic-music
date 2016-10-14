@@ -1,0 +1,7 @@
+class video(self): 
+	name
+	youtube url
+	length
+	category = []
+
+
