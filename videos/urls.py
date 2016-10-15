@@ -26,5 +26,5 @@ from .views import VideoDetailView
 urlpatterns = [
 
     url(r'^(?P<pk>\d+)', VideoDetailView.as_view(), name = "video_detail"),
-    url(r'^$', VideoListlView.as_view(), name = "videos"),
+    # url(r'^$', VideoListlView.as_view(), name = "videos"),
 ]
