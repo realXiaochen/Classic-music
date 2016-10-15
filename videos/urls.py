@@ -13,12 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf import settings
 from django.conf.urls import include, url
-from django.conf.urls.static import static
-from django.contrib import admin
+# from videos.views import video_detail_view_func
 
-from newsletter import views as newsletter_views
+from .views import VideoDetailView
 
 # from newsletter import views as newsletter_views
 # from videos import urls as videos_url
@@ -26,9 +24,7 @@ from newsletter import views as newsletter_views
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$',newsletter_views.home, name = "home"),
-	# url(r'^accounts/', include('registration.backends.hmac.urls')),
-    url(r'^accounts/', include('registration.backends.simple.urls'),),
-    url(r'^videos/', include('videos.urls'),),
+
+    url(r'^(?P<pk>\d+)', VideoDetailView.as_view(), name = "video_detail"),
+    url(r'^$', VideoListlView.as_view(), name = "videos"),
 ]
