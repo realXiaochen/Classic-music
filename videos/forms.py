@@ -1,11 +1,20 @@
 from django import forms
 
-from .models import Video
+from .models import Video, Category
+from django.utils.text import slugify
+
+class CategoryForm(forms.ModelForm):
+	class Meta:
+		model = Category
+		fields = ['title','slug','active']
+
+
 
 class VideoForm(forms.ModelForm):
 	class Meta:
 		model = Video
-		fields = ['title','description','video_url']
+		fields = ['title','categories','active']
+		# fields = ['title','description','video_url']
 
 
 	# def clean_email(self):

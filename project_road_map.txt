@@ -1,7 +1,30 @@
-class video(self): 
-	name
+video 
+	name = TextField
 	youtube url
-	length
-	category = []
+	length = 
+	created = 
+	category = {}
 
+--> single video (detail view)
+--> List video ( list view)
+--> video control + 
+--> search video
+--> share a video
+
+user profile
+	name
+	contact
+	video
+	comment
+
+	
+comment
+	write a comment
+	reply to a comment
+	email a user
+
+blog
+	write a post
+	repley to the pose
+	email to each other
 

@@ -16,7 +16,8 @@ Including another URLconf
 from django.conf.urls import include, url
 # from videos.views import video_detail_view_func
 
-from .views import VideoDetailView
+from .views import VideoDetailView, VideoListView
+
 
 # from newsletter import views as newsletter_views
 # from videos import urls as videos_url
@@ -25,6 +26,6 @@ from .views import VideoDetailView
 
 urlpatterns = [
 
+    url(r'^$',VideoListView.as_view(), name = "video_list"),
     url(r'^(?P<pk>\d+)', VideoDetailView.as_view(), name = "video_detail"),
-    # url(r'^$', VideoListlView.as_view(), name = "videos"),
 ]

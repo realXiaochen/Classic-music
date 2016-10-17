@@ -9,34 +9,14 @@
 
 
 
-
 {% block content %}
-<div class = 'row'>
-	<div class = "col-md-9">
-		<div class = 'row'>
-			video here
-		</div>
-		<div class = 'row'>
-			title
-		</div>
-		<div class = 'row'>
-			link to user
-		</div>
-		<div class = 'row'>
-			comment 
-		</div>
-	</div>
-	<div class = "col-md-3">
-		<div class = 'row'>
-			<h3>Related Videos</h3>
-		</div>
-		<hr>
-		<div class = 'row'>
-			video image
-		</div>
-		<div class = 'row'>
-			video name
-		</div>
-	</div>
-</div>
+<table class="table">
+{% for video in video_list %}
+<tr>
+	<td>
+	<a href = '{{video.get_absolute_url}}'>{{video.title}}</a>
+	</td>
+</tr>
+{% endfor %}
+</table>
 {% endblock %}

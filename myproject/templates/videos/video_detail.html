@@ -12,27 +12,31 @@
 
 {% block content %}
 <div class = 'row'>
-	<div class = "col-md-9">
-		<div class = 'row'>
-			{{object.title}}
-		</div>
-		<div class = 'row'>
-			related tag link here
-		</div>
+	<div class = "col-sm-9">
 		<div class = 'row'>
 			video here
 		</div>
 		<div class = 'row'>
-			comment here
+			{{object.title}}
+		</div>
+		<div class = 'row'>
+			link to user
+		</div>
+		<div class = 'row'>
+			comment 
 		</div>
 	</div>
-	<div class = "col-md-3">
+	<div class = "col-sm-3">
 		<div class = 'row'>
-			<h3> Related Videos</h3>
+			<h3>Related Videos</h3>
 		</div>
 		<hr>
 		<div class = 'row'>
-			video image
+			{% for video in related %}
+				<p>
+				<a href="{{video.get_absolute_url}}">{{video.title}}</a>
+				</p>
+			{% endfor %}
 		</div>
 		<div class = 'row'>
 			video name

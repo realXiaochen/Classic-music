@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Welcome | {{ block.super }}{% endblock %}
+
+
+{% block jumbotron %}
+<!-- <div class = "row">
+
+<div class = "col-md-7">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/UmU4KX7nxYs" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class = "col-md-5">
+	<h1 class = "lead">Enjoy</h1>
+	<p></p>
+	<br>
+	<p>The Best of Classical Music - Mozart, Beethoven, Bach, Chopin... </p>
+	<p>
+	<br>
+	<a class="btn btn-lg btn-success" href="" role="button">
+	<span class = "hover-black">Pick one</span> </a>
+	</p>
+</div>
+
+
+
+</div> -->
+
+{% endblock %}
+
+
+
+
+{% block content %}
+<!-- <div class = "row">
+<div class = "col-md-3 pull-right">
+<h1 class = "lead">{{ title }}</h1>
+<form method='POST' action=''>{% csrf_token %}
+{{ form | crispy }}
+
+<input type='submit' value='Sign Up' />
+</form>
+</div>
+</div> -->
+
+<h3>{{object.title}}</h3>
+<table class = "table">
+{% for video in object.video_set.all %}
+<tr>
+<td><a href="{{video.get_absolute_url}}">{{video.title}}</a></td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
