@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 import random
@@ -13,12 +14,25 @@ class VideoDetailView(DetailView):
 		context["related"] = sorted(Video.objects.get_related(instance), key=lambda x:random.random())
 		return context
 
+
 class VideoListView(ListView):
 	model = Video
 	def get_context_data(self, **kwargs):
 		context = super(VideoListView, self).get_context_data(**kwargs)
 		context['number'] = 1
 		return context
+	def get_queryset(self,*args,**kwargs):
+		qs = super(VideoListView,self).get_queryset(*args,**kwargs)
+		query = self.request.GET.get("q")
+		if query:
+			qs = self.model.objects.filter(
+				Q(title__icontains=query) |
+				Q(description__icontains=query)
+				)
+		return qs
+
+
+
 
 class CategoryListView(ListView):
 	model = Category
@@ -26,6 +40,9 @@ class CategoryListView(ListView):
 
 class CategoryDetailView(DetailView):
 	model = Category
+
+
+
 
 
 # def video_detail_view_func(request, id):

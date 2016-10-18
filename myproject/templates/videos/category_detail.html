@@ -43,15 +43,28 @@
 </form>
 </div>
 </div> -->
+<div class = "container"
+<br><br>
+<h3 class = "lead">{{object.title}}</h3>
+<hr>
+{{object.video_set.all}}
+</div>
 
-<h3>{{object.title}}</h3>
-<table class = "table">
+
+
+
+
+
+
+
+
+<!-- <table class = "table">
 {% for video in object.video_set.all %}
 <tr>
 <td><a href="{{video.get_absolute_url}}">{{video.title}}</a></td>
 </tr>
 {% endfor %}
-</table>
+</table> -->
 
 {% endblock %}
 

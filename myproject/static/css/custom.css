@@ -6,3 +6,55 @@
 .hover-black:hover {
 	color: #000000;
 }
+
+
+.thumbnail{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.thumbnail-title {
+	text-align: center;
+}
+
+.thumbnail:img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.headerDivider {
+     border-left:1px solid #38546d; 
+     border-right:1px solid #16222c; 
+}
+
+
+.navbar{
+	background-color:#000000;
+	height:22px;
+	color:white;
+}
+
+body{
+font-family: '.SFNSDisplay-Regular', sans-serif; 
+}
+
+.jumbotron {
+	background-color:#000000;
+	height: 500px;
+
+}
+.random-button {
+	background-color:#3399ff;
+}
+
+.white-letter{
+	color: white;
+}
+
+.black-letter{
+	color: black;
+}
+
+.red-background{
+	background-color: red;
+}

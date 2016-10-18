@@ -31,6 +31,6 @@ urlpatterns = [
     url(r'^$',newsletter_views.home, name = "home"),
 	# url(r'^accounts/', include('registration.backends.hmac.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls'),),
-    url(r'^videos/', include('videos.urls'),),
-    url(r'^categories/', include('videos.urls_categories'),),
+    url(r'^videos/', include('videos.urls')),
+    url(r'^categories/', include('videos.urls_categories'),name = "categories"),
 ]

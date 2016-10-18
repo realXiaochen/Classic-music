@@ -6,7 +6,6 @@ from django.db import models
 
 
 # Create your models here.
-
 class VideoQuerySet(models.query.QuerySet):
 	def active(self):
 		return self.filter(active=True)
@@ -63,12 +62,22 @@ class Category(models.Model):
 	def get_absolute_url(self):
 		return reverse("category_detail", kwargs={"slug":self.slug})
 
+	def get_video_list(self):
+		return Video.objects.all.filter()
+
 class VideoImage(models.Model):
 	video = models.ForeignKey(Video)
-	image = models.ImageField(upload_to='videos/')
+	image = models.ImageField(upload_to="img/video_img")
 
 	def __unicode__(self):
 		return self.video.title
+
+class CategoryImage(models.Model):
+	category = models.ForeignKey(Category)
+	image = models.ImageField(upload_to="img/category_img")
+
+	def __unicode__(self):
+		return self.category.title
 
 
 
