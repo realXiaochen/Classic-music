@@ -13,36 +13,34 @@
 {% block content %}
 <br><br><br>
 <div class = 'row'>
-	<div class = "col-sm-8">
+	<div class = "col-sm-10">
 		<div class = 'row'>
-			<h3 class= "lead">{{object.title}}</h3>
+			<h2>{{object.title}}</h2>
 		</div>
-		<hr>
+		<br>
 		<div class = 'row'>
 			{{object.video_url | safe}}
 		</div>
 		<br>
 		<div class = 'row'>
-			comment 
 		</div>
 	</div>
-	<div class = "col-sm-3 pull-right">
+	<div class = "col-sm-2 pull-right">
 		<div class = 'row'>
-			<h3 class= "lead">Related Videos</h3>
+			<h3>Related Videos</h3>
 		</div>
 		<hr>
+		{% for video in related %}
 		<div class = 'row'>
-			{% for video in related %}
-				<div class = "thumbnail col-md-6">
-				<p>
-				<a href="{{video.get_absolute_url}}">{{video.title}}</a>
-				</p>
-				<div>
-				{% cycle '' '</div><div class = "row">' %}
-			{% endfor %}
+			<a href="{{ video.get_absolute_url }}">
+				<img style="width:100%" src='{{video.video_img_url}}'/>
+				<div style ="text-align: center">
+					{{video.title}}
+				</div>
+			</a>
 		</div>
-		<div class = 'row'>
-		</div>
+		<br>
+		{% endfor %}
 	</div>
 </div>
 {% endblock %}
