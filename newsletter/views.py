@@ -15,7 +15,7 @@ def home(request):
 
 	random_idx = random.randint(0, Video.objects.count() - 1)
 	random_video = Video.objects.all()[random_idx]
-	random_videos = Video.objects.all().order_by('?')[:4]
+	random_videos = Video.objects.all().order_by('?')[:8]
 	context = {
 		"title":title,
 		"form":form,

@@ -14,12 +14,13 @@
 <br><br>
 <div class = 'row'>
 	{% for category in category_list %}
-	<div class = "col-sm-6 col-md-3" style = "max-width:50%">
+	<div class = "col-sm-6 col-md-3" style = "">
 		<a href="{{ category.get_absolute_url }}">
 				<img style="width:100%" src='{{category.category_img_url}}'/>
 			<div class = "lead" style ="text-align: center">
 				{{category.title}}
 			</div>
+			<br>
 		</a>
 	</div>
 

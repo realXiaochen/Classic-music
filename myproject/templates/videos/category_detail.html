@@ -49,16 +49,17 @@
 <hr>
 <div class = 'row'>
 	{% for video in object.video_set.all %}
-	<div class = "col-sm-6 col-md-3" style = "max-width:50%">
+	<div class = "col-sm-6 col-md-3" style = "">
 		<a href="{{ video.get_absolute_url }}">
 				<img style="width:100%" src='{{video.video_img_url}}'/>
 			<div style ="text-align: center">
 				{{video.title}}
 			</div>
+			<br>
 		</a>
 	</div>
 
-	{% cycle '' '' '' '</div><br><div class = "row">' %}
+	{% cycle '' '' '' '</div><div class = "row">' %}
 	{% endfor %}
 </div>
 {% endblock %}
