@@ -13,7 +13,7 @@ class CategoryForm(forms.ModelForm):
 class VideoForm(forms.ModelForm):
 	class Meta:
 		model = Video
-		fields = ['title','categories','active']
+		fields = ['title','categories','video_url','active']
 		# fields = ['title','description','video_url']
 
 
