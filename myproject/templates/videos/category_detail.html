@@ -47,25 +47,20 @@
 <br><br>
 <h3 class = "lead">{{object.title}}</h3>
 <hr>
-{{object.video_set.all}}
+<div class = 'row'>
+	{% for video in object.video_set.all %}
+	<div class = "col-sm-6 col-md-3" style = "max-width:50%">
+		<a href="{{ video.get_absolute_url }}">
+				<img style="width:100%" src='{{video.video_img_url}}'/>
+			<div style ="text-align: center">
+				{{video.title}}
+			</div>
+		</a>
+	</div>
+
+	{% cycle '' '' '' '</div><br><div class = "row">' %}
+	{% endfor %}
 </div>
-
-
-
-
-
-
-
-
-
-<!-- <table class = "table">
-{% for video in object.video_set.all %}
-<tr>
-<td><a href="{{video.get_absolute_url}}">{{video.title}}</a></td>
-</tr>
-{% endfor %}
-</table> -->
-
 {% endblock %}
 
 
