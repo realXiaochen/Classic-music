@@ -26,7 +26,7 @@ class VideoManager(models.Manager):
 
 
 class Video(models.Model):
-	title = models.CharField(max_length=120)
+	title = models.CharField(max_length=240)
 	description = models.TextField(blank = True,null=True)
 	video_url = models.CharField(max_length=240)
 	video_img_url = models.CharField(max_length=240)
