@@ -66,7 +66,7 @@ font-family: '.SFNSDisplay-Regular', sans-serif;
 .title {
 	text-align: center;
     white-space: nowrap;
-    width: 19em;
+    width: 20em;
     overflow: hidden;
     text-overflow: ellipsis;
 }

@@ -8,27 +8,25 @@
 
 
 
-<div class = "row">
+<div class = "row visible-desktop">
 
-<div class = "col-sm-6 col-md-7">
+	<div class = "col-sm-6 col-md-7">
+		<br><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/UmU4KX7nxYs" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+	<div class = "col-sm-6 col-md-5 white-letter ">
 	<br><br>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/UmU4KX7nxYs" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class = "col-sm-6 col-md-5 white-letter ">
-<br><br>
-	<h1 class = "lead">Enjoy</h1>
-	<p></p>
-	<br>
-	<p>The Best of Classical Music - Mozart, Beethoven, Bach, Chopin... </p>
-	<p>
-	<br>
-	<a class="btn btn-lg red-background white-letter" href="{{random_video.get_absolute_url}}" role="button">
-	<span>Pick one</span> </a>
-	</p>
-</div>
-
-
+		<h1 class = "lead">Enjoy</h1>
+		<p></p>
+		<br>
+		<p>The Best of Classical Music - Mozart, Beethoven, Bach, Chopin... </p>
+		<p>
+		<br>
+		<a class="btn btn-lg red-background white-letter" href="{{random_video.get_absolute_url}}" role="button">
+		<span>Pick one</span> </a>
+		</p>
+	</div>
 
 </div>
 {% endblock %}
@@ -42,7 +40,7 @@
 			<a href="{{ video.get_absolute_url }}">
 				<img style="width:100%" src='{{video.video_img_url}}'/>
 				<br>
-				<div class="video_page_title">
+				<div class="title">
 					{{video.title}}
 				</div>
 				<br>
