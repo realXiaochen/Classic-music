@@ -13,7 +13,6 @@
 <br><br>
 <div class = 'row'>
 	{% for video in video_list %}
-	<br>
 		<div class = "col-sm-6 col-md-3" style = "">
 			<a href="{{ video.get_absolute_url }}">
 				<img style="width:100%" src='{{video.video_img_url}}'/>
@@ -21,8 +20,8 @@
 				<div class = "title">
 					{{video.title}}
 				</div>
+				<br>
 			</a>
-			<br>
 		</div>
 
 	{% cycle '' '' '' '</div><div class = "row">' %}
