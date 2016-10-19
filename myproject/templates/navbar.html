@@ -18,17 +18,17 @@
           <ul class="nav navbar-nav navbar-right">
 
           {% if request.user.is_authenticated %}
-            <li><a href="{% url 'auth_logout' %}"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i><span class = "white-letter"> Sign Out </span> </i></a> </li>
+            <li><a href="{% url 'auth_logout' %}"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i><span class = "white-letter"> Sign Out ({{user}})&nbsp&nbsp&nbsp&nbsp&nbsp</span> </i></a> </li>
             <li>&nbsp&nbsp&nbsp</li>
             {% else %}
 
               {%if not "/accounts/register" in request.get_full_path %}
-              <li><a href="{% url 'registration_register' %}"><i class="fa fa-user-plus " aria-hidden="true"></i><span class= "white-letter"> Register</span></a></li>
+              <li><a href="{% url 'registration_register' %}"><i class="fa fa-user-plus " aria-hidden="true"></i><span class= "white-letter"> Register&nbsp&nbsp&nbsp&nbsp&nbsp</span></a></li>
               {% endif %}
 
               {%if not "/accounts/login" in request.get_full_path %}
 
-                <li><a href="{% url 'auth_login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i><span class= "white-letter">Sign in</span></a></li>
+                <li><a href="{% url 'auth_login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i><span class= "white-letter">Sign in&nbsp&nbsp&nbsp&nbsp&nbsp</span></a></li>
 <!--                 <form class='navbar-form navbar-right' method='POST' action='{% url "auth_login" %}'>{% csrf_token %}
                   <div class='form-group'>
                       <input type='text' class='form-control' name='username' placeholder='Username' /> 
