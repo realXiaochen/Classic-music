@@ -11,17 +11,16 @@
 
 {% block content %}
 <br><br>
-{% for video in video_list %}
 <div class = 'row'>
 	{% for video in video_list %}
-	<div class = "col-sm-6 col-md-3" style = "max-width:50%">
-		<a href="{{ video.get_absolute_url }}">
+		<div class = "col-sm-6 col-md-3" style = "max-width:50%">
+			<a href="{{ video.get_absolute_url }}">
 				<img style="width:100%" src='{{video.video_img_url}}'/>
-			<div class = "lead" style ="text-align: center">
-				{{video.title}}
-			</div>
-		</a>
-	</div>
+				<div style ="text-align: center">
+					{{video.title}}
+				</div>
+			</a>
+		</div>
 
 	{% cycle '' '' '' '</div><div class = "row">' %}
 	{% endfor %}
@@ -29,7 +28,6 @@
 
 </div>
 {% endfor %}
-</table>
 {% endblock %}
 
 
