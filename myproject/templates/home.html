@@ -23,7 +23,7 @@
 	<p>The Best of Classical Music - Mozart, Beethoven, Bach, Chopin... </p>
 	<p>
 	<br>
-	<a class="btn btn-lg red-background white-letter" href="" role="button">
+	<a class="btn btn-lg red-background white-letter" href="{{random_video.get_absolute_url}}" role="button">
 	<span>Pick one</span> </a>
 	</p>
 </div>
@@ -36,17 +36,20 @@
 
 
 {% block content %}
+<div class = 'row'>
+	{% for video in random_videos %}
+		<div class = "col-sm-6 col-md-3" style = "max-width:50%">
+			<a href="{{ video.get_absolute_url }}">
+				<img style="width:100%" src='{{video.video_img_url}}'/>
+				<div style ="text-align: center">
+					{{video.title}}
+				</div>
+			</a>
+		</div>
 
-<!-- <div class = "row">
-<div class = "col-md-3 pull-right">
-<h1 class = "lead">{{ title }}</h1>
-<form method='POST' action=''>{% csrf_token %}
-{{ form | crispy }}
-
-<input type='submit' value='Sign Up' />
-</form>
+	{% cycle '' '' '' '</div><br><div class = "row">' %}
+	{% endfor %}
 </div>
-</div> -->
 
 {% endblock %}
 </div>
