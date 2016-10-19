@@ -28,8 +28,8 @@ class VideoManager(models.Manager):
 class Video(models.Model):
 	title = models.CharField(max_length=120)
 	description = models.TextField(blank = True,null=True)
-	video_url = models.CharField(max_length=120)
-	video_img_url = models.CharField(max_length=120)
+	video_url = models.CharField(max_length=240)
+	video_img_url = models.CharField(max_length=240)
 	active = models.BooleanField(default=True)
 	created = models.DateTimeField(auto_now_add=True,auto_now=False)
 	categories = models.ManyToManyField('Category')
