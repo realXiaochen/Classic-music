@@ -13,29 +13,30 @@
 {% block content %}
 <br><br><br>
 <div class = 'row'>
-	<div class = "col-sm-10">
+	<div class = "col-md-8">
 		<div class = 'row'>
-			<h2 class = "title">{{object.title}}</h2>
+			<h2 class = "lead">{{object.title}}</h2>
 		</div>
 		<br>
 		<div class = 'row'>
+			<div class = "video-container">
 			{{object.video_url | safe}}
+			</div>
 		</div>
 		<br>
-		<div class = 'row'>
-		</div>
 	</div>
-	<div class = "col-sm-2 pull-right">
+	<div class = "col-md-2 col-md-offset-2">
 		<div class = 'row'>
 			<h3>Related Videos</h3>
 		</div>
 		<hr>
 		{% for video in related %}
 		<div class = 'row'>
+
 			<a href="{{ video.get_absolute_url }}">
 				<img style="width:100%" src='{{video.video_img_url}}'/>
-				<div style ="text-align: center">
-					{{video.title}}
+				<div>
+					<p class = "text-center">{{video.title}}<p>
 				</div>
 			</a>
 		</div>
