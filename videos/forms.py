@@ -6,14 +6,14 @@ from django.utils.text import slugify
 class CategoryForm(forms.ModelForm):
 	class Meta:
 		model = Category
-		fields = ['title','slug','active']
+		fields = ['title','slug','category_img_url','active']
 
 
 
 class VideoForm(forms.ModelForm):
 	class Meta:
 		model = Video
-		fields = ['title','categories','video_url','active']
+		fields = ['title','categories','video_url','video_img_url','active']
 		# fields = ['title','description','video_url']
 
 

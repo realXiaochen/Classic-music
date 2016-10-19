@@ -1,4 +1,3 @@
-
 from __future__ import unicode_literals
 
 from django.core.urlresolvers import reverse
@@ -30,7 +29,7 @@ class Video(models.Model):
 	title = models.CharField(max_length=120)
 	description = models.TextField(blank = True,null=True)
 	video_url = models.CharField(max_length=120)
-	picture_url = models.CharField(max_length=120)
+	video_img_url = models.CharField(max_length=120)
 	active = models.BooleanField(default=True)
 	created = models.DateTimeField(auto_now_add=True,auto_now=False)
 	categories = models.ManyToManyField('Category')
@@ -52,6 +51,7 @@ class Video(models.Model):
 class Category(models.Model):
 	title = models.CharField(max_length=120, unique = True)
 	slug = models.SlugField(unique=True)
+	category_img_url = models.TextField(null=True, blank=True)
 	description = models.TextField(null=True, blank=True)
 	active = models.BooleanField(default=True)
 	created = models.DateTimeField(auto_now_add=True, auto_now=False)
@@ -65,19 +65,7 @@ class Category(models.Model):
 	def get_video_list(self):
 		return Video.objects.all.filter()
 
-class VideoImage(models.Model):
-	video = models.ForeignKey(Video)
-	image = models.ImageField(upload_to="img/video_img")
 
-	def __unicode__(self):
-		return self.video.title
-
-class CategoryImage(models.Model):
-	category = models.ForeignKey(Category)
-	image = models.ImageField(upload_to="img/category_img")
-
-	def __unicode__(self):
-		return self.category.title
 
 
 

@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Video, Category, VideoImage, CategoryImage
+from .models import Video, Category
 from .forms import VideoForm, CategoryForm
 
 class VideoAdmin(admin.ModelAdmin):
@@ -17,6 +17,3 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category,CategoryAdmin)
-
-admin.site.register(VideoImage)
-admin.site.register(CategoryImage)

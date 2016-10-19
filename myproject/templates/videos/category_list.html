@@ -16,11 +16,7 @@
 	{% for category in category_list %}
 	<div class = "col-sm-6 col-md-3" style = "max-width:50%">
 		<a href="{{ category.get_absolute_url }}">
-			{% if category.categoryimage_set.count > 0 %}
-				{% for img in category.categoryimage_set.all %}
-				<img style="width:100%" src='{{img.image.url}}'/>
-				{% endfor %}
-			{% endif %}
+				<img style="width:100%" src='{{category.category_img_url}}'/>
 			<div class = "lead" style ="text-align: center">
 				{{category.title}}
 			</div>
