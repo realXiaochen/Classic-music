@@ -62,3 +62,11 @@ font-family: '.SFNSDisplay-Regular', sans-serif;
 .red-background{
 	background-color: red;
 }
+
+.title {
+	text-align: center;
+    white-space: nowrap;
+    width: 19em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
