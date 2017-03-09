@@ -1,4 +1,4 @@
-# Xiaochen's Music Site (Django)  
+# Classic music (python/Django)  
 
    - A video streaming site deployed on Heroku.com
    - Demonstration of basic Django skill
