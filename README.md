@@ -4,7 +4,7 @@
    - Demonstration of basic Django skill
    
 ## Tool Used
-- python
+- Python
 - Django
 - Crispy form
 - Registration
