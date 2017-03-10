@@ -1,4 +1,4 @@
-# Classic music (python/Django)  
+# Classic music (Python/Django)  
 
 - Video streaming site deployed on Heroku.com
 - Demonstration of Django skill
