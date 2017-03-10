@@ -1,7 +1,7 @@
 # Classic music (python/Django)  
 
    - A video streaming site deployed on Heroku.com
-   - Demonstration of basic Django skill
+   - Demonstration of Django skill
    
 ## Tool Used
 - Python
